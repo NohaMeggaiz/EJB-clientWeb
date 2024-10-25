@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<faces-config xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_4_0.xsd"
+              version="4.0">
+    <factory>
+        <exception-handler-factory>com.example.config.DefaultExceptionHandlerFactory</exception-handler-factory>
+    </factory>
+
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>zh</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>messages</base-name>
+            <var>messages</var>
+        </resource-bundle>
+    </application>
+
+
+</faces-config>
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                                  https://jakarta.ee/xml/ns/jakartaee/faces-config_4_0.xsd"
+              version="4.0">
+
+
+<navigation-rule>
+<from-view-id>/index.xhtml</from-view-id>
+<navigation-case>
+    <from-outcome>mesEmprunts</from-outcome>
+    <to-view-id>/mesEmprunts.xhtml</to-view-id>
+</navigation-case>
+</navigation-rule>
+
+
+<managed-bean>
+<managed-bean-name>CDBean</managed-bean-name>
+<managed-bean-class>com.example.CDBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+        </faces-config>
+
+ -->

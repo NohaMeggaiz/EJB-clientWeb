@@ -1,0 +1,14 @@
+<h:dataTable value="#{CDBean.cdsDisponibles}" var="cd">
+    <h:column>
+        <f:facet name="header">Titre</f:facet>
+        #{cd.titre}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Emprunter</f:facet>
+        <h:commandButton value="Emprunter" action="#{CDBean.emprunterCD}" >
+            <f:setPropertyActionListener target="#{CDBean.cdId}" value="#{cd.id}" />
+        </h:commandButton>
+    </h:column>
+</h:dataTable>
+
+<h:commandButton value="Voir mes emprunts" action="mesEmprunts.xhtml" />

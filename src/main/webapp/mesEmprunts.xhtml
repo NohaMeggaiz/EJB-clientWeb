@@ -1,0 +1,19 @@
+
+
+
+<h:dataTable value="#{CDBean.cdsEmpruntes}" var="emprunt">
+
+
+    <h:column>
+        <f:facet name="header">Titre</f:facet>
+        #{emprunt.cd.titre}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Date d'emprunt</f:facet>
+        #{emprunt.dateEmprunt}
+    </h:column>
+    <h:column>
+        <f:facet name="header">Retourner</f:facet>
+        <h:commandButton value="Retourner" action="#{CDBean.retournerCD(emprunt.id)}" />
+    </h:column>
+</h:dataTable>
